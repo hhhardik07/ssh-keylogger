@@ -60,7 +60,7 @@ int bpf_read(struct pt_regs *ctx) {
 
     return 0;
 }
-"""
+
 # loading the program and attaching it
 bpf = BPF(text=ebpf_program)
 bpf.attach_kprobe(name="read", fn_name="bpf_read")
